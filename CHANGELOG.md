@@ -1,8 +1,33 @@
 # Changelog
 
-## Next release
+## v2.1.0
 
-*Released: TBD*
+*Released: January 23rd 2021*
+
+- Fix `~/.docker` files from always being owned by root (check the next line for details)
+- Add `docker__login_become_user` variable which defaults to the first user in `docker__users`
+- Set `virtualenv_python` to use `python3` in the pip task to fix systems having Python 2 and 3 installed
+- Add support for `aarch64` CPU architecture
+
+## v2.0.0
+
+*Released: May 19th 2020*
+
+- **Backwards incompatible change:** `python-docker` was renamed to `python3-docker`
+- Fix symlink related issues with virtualenv when using virtualenv 20+
+- Configure daemon before installing Docker to allow customizing certain things
+- Support multiple CPU architecture types (amd64, arm64, armhf, armv7l)
+- Officially support Ubuntu 20.04
+- Remove all support for Python 2.x
+- Officially remove support for Ubuntu 16.04
+
+## v1.9.2
+
+*Released: February 13th 2020*
+
+- Add `gcc` as dependency since Docker Compose 1.25+ needs it
+- Add `python(3)-dev` as dependency since Docker Compose 1.25+ needs it
+- Fix Docker module import error so that you can use the `docker_*` Ansible modules
 
 ## v1.9.1
 
